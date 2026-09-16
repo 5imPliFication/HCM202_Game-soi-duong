@@ -1,0 +1,82 @@
+#app {
+  min-height: 100vh;
+}
+
+.screen {
+  display: none;
+  min-height: 100vh;
+}
+
+.screen.active {
+  display: block;
+}
+
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: var(--panel);
+  border-bottom: 1px solid var(--line);
+}
+
+.app-title {
+  font-size: 1.35rem;
+  margin: 0;
+  color: var(--accent);
+}
+
+.app-badge {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  padding: 0.2rem 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--paper);
+  white-space: nowrap;
+}
+
+.app-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.map-area {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.app-footer {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid var(--line);
+}
+
+.app-body.single {
+  grid-template-columns: 1fr;
+  max-width: 780px;
+  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
+}
+
+@media (min-width: 900px) {
+  .app-body {
+    grid-template-columns: 320px 1fr;
+    align-items: start;
+  }
+
+  .stats-panel {
+    position: sticky;
+    top: 4.5rem;
+  }
+}

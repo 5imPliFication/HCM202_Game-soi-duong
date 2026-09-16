@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Soi Đường — Xây dựng một cộng đồng văn hóa mới</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+</head>
+<body>
+  <main id="app">
+
+    <!-- Màn hình chính -->
+    <section class="screen active" data-screen="title">
+      <div class="title-wrap">
+        <p class="title-kicker">HCM202 · Tư tưởng Hồ Chí Minh · FPTU</p>
+        <h1 class="title-name">Soi Đường</h1>
+        <p class="title-sub">Xây dựng một cộng đồng văn hóa mới</p>
+        <blockquote class="title-cite">«Giữ gốc dân tộc, tiếp thu tinh hoa nhân loại, dùng tri thức và đạo đức để xây dựng cuộc sống tốt đẹp cho nhân dân.»</blockquote>
+        <div class="title-actions">
+          <button id="btn-new" class="btn btn-primary" type="button">Bắt đầu</button>
+          <button id="btn-continue" class="btn" type="button" hidden>Tiếp tục</button>
+          <button id="btn-reset" class="btn btn-ghost" type="button" hidden>Xóa tiến trình</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Màn chơi -->
+    <section class="screen" data-screen="level">
+      <header class="app-header">
+        <button id="btn-level-back" class="btn btn-small btn-ghost" type="button">⟨ Bản đồ</button>
+        <span id="level-h-title" class="app-title level-h-title"></span>
+        <span id="level-progress" class="app-badge"></span>
+      </header>
+      <div class="app-body single">
+        <div class="scenario">
+          <div class="scenario-scope">
+            <h3 id="scenario-title" class="scenario-title"></h3>
+            <div id="scenario-progress" class="scenario-progress" aria-label="Tiến trình tình huống"></div>
+            <p id="scenario-context" class="scenario-context"></p>
+            <p id="scenario-prompt" class="scenario-prompt"></p>
+          </div>
+          <div id="scenario-choices" class="scenario-choices" aria-label="Lựa chọn"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hậu quả lựa chọn -->
+    <section class="screen" data-screen="explanation">
+      <div class="app-body single">
+        <div class="explanation">
+          <p class="explanation-kicker">Hậu quả lựa chọn</p>
+          <h2 id="explanation-title" class="explanation-title"></h2>
+          <span id="explanation-correct" class="correct-badge" hidden>✓ Lựa chọn phù hợp</span>
+          <div id="explanation-deltas" class="explanation-deltas" aria-label="Biến động chỉ số"></div>
+          <div class="explanation-body">
+            <p id="explanation-text"></p>
+            <blockquote id="explanation-thesis" class="explanation-thesis"></blockquote>
+          </div>
+          <button id="btn-scenario-next" class="btn btn-primary" type="button"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bản đồ làng -->
+    <section class="screen" data-screen="map">
+      <header class="app-header">
+        <h1 class="app-title">Soi Đường</h1>
+        <span class="app-badge">Làng văn hóa mới</span>
+      </header>
+
+      <div class="app-body">
+        <aside class="stats-panel" aria-label="Chỉ số cộng đồng">
+          <h2 class="panel-title">Chỉ số cộng đồng</h2>
+          <div id="core-stats" class="stats-core"></div>
+          <div id="support-stats" class="stats-support"></div>
+          <div id="status-banner" class="status-banner" aria-live="polite"></div>
+        </aside>
+
+        <div class="map-area">
+          <div id="village" class="village">
+            <div class="village-header">
+              <h2 class="village-name">Làng Văn Hóa Mới</h2>
+              <div class="village-balance">
+                <span class="balance-label">Thăng bằng</span>
+                <span id="balance-value" class="balance-value">—</span>
+              </div>
+            </div>
+            <div id="level-slots" class="level-slots" aria-label="Công trình làng"></div>
+            <div id="area-legend" class="area-legend" aria-label="Năm điểm lớn"></div>
+          </div>
+          <div class="dev-panel">
+            <h3 class="dev-title">Bảng thử nghiệm (tạm thời)</h3>
+            <p class="dev-note">Điều chỉnh chỉ số để kiểm tra hệ thống; sẽ được gỡ bỏ khi có nội dung chính thức.</p>
+            <div class="dev-actions">
+              <button type="button" class="btn btn-small" data-delta="dantoc:10">+10 Dân tộc</button>
+              <button type="button" class="btn btn-small" data-delta="khoahoc:10">+10 Khoa học</button>
+              <button type="button" class="btn btn-small" data-delta="daichung:10">+10 Đại chúng</button>
+              <button type="button" class="btn btn-small" data-delta="trithuc:8">+8 Tri thức</button>
+              <button type="button" class="btn btn-small" data-delta="daoduc:8">+8 Đạo đức</button>
+              <button type="button" class="btn btn-small" data-delta="doanket:8">+8 Đoàn kết</button>
+              <button type="button" class="btn btn-small" data-delta="phucloi:8">+8 Phúc lợi</button>
+              <button type="button" class="btn btn-small" data-delta="kinhte:8">+8 Kinh tế</button>
+              <button type="button" class="btn btn-small btn-warn" data-delta="kinhte:-12">−12 Kinh tế</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer class="app-footer">
+        <button id="btn-knowledge" class="btn btn-ghost" type="button">📖 Kiến thức đã học</button>
+        <button id="btn-to-title" class="btn btn-ghost" type="button">Về màn hình chính</button>
+      </footer>
+    </section>
+
+    <!-- Kết quả -->
+    <section class="screen" data-screen="result">
+      <div class="app-body single">
+        <div class="result">
+          <p class="result-kicker">Kết quả</p>
+          <h2 id="result-title" class="result-title"></h2>
+          <p id="result-subtitle" class="result-subtitle"></p>
+          <div id="result-reasons" class="result-reasons" aria-label="Nhận định"></div>
+          <div class="result-balance">
+            <span class="balance-label">Thăng bằng</span>
+            <span id="result-balance-value" class="balance-value">—</span>
+          </div>
+          <h3 class="panel-title">Chỉ số cộng đồng</h3>
+          <div id="result-core-stats" class="stats-core"></div>
+          <div id="result-support-stats" class="stats-support"></div>
+          <div class="result-actions">
+            <button id="btn-result-knowledge" class="btn" type="button">📖 Kiến thức đã học</button>
+            <button id="btn-result-map" class="btn" type="button">Về bản đồ</button>
+            <button id="btn-result-restart" class="btn btn-primary" type="button">Chơi lại</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kiến thức đã học -->
+    <section class="screen" data-screen="knowledge">
+      <header class="app-header">
+        <button id="btn-knowledge-back" class="btn btn-small btn-ghost" type="button">⟨ Bản đồ</button>
+        <h1 class="app-title">Kiến thức đã học</h1>
+        <span class="app-badge">Kho tri thức</span>
+      </header>
+      <div class="app-body single">
+        <p id="knowledge-empty" class="knowledge-empty"></p>
+        <div id="knowledge-list" class="knowledge-list"></div>
+        <div class="knowledge-actions">
+          <button id="btn-knowledge-title" class="btn btn-ghost" type="button">Về màn hình chính</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

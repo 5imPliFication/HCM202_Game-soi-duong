@@ -1,0 +1,67 @@
+:root {
+  --paper: #f6efdf;
+  --paper-deep: #ece0c6;
+  --panel: #fffdf6;
+  --ink: #2e2316;
+  --ink-soft: #6f5f49;
+  --line: #dfd0b2;
+  --accent: #a3382a;
+  --accent-dark: #7e2a1f;
+  --gold: #c99738;
+  --leaf: #51733f;
+  --water: #3f7c8c;
+
+  --good: #3c7a4c;
+  --warn: #c08a2e;
+  --bad: #b03a2e;
+
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-head: Georgia, "Times New Roman", serif;
+
+  --radius: 12px;
+  --shadow: 0 2px 8px rgba(46, 35, 22, 0.12);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background-color: var(--paper);
+  background-image: radial-gradient(circle at 20% 10%, rgba(201, 151, 56, 0.08), transparent 40%),
+    radial-gradient(circle at 85% 90%, rgba(163, 56, 42, 0.06), transparent 45%);
+  background-attachment: fixed;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-head);
+  margin: 0 0 0.4em;
+  line-height: 1.25;
+}
+
+p {
+  margin: 0 0 0.8em;
+}
+
+button {
+  font-family: inherit;
+}
+
+[hidden] {
+  display: none !important;
+}
