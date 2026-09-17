@@ -68,23 +68,26 @@ export function renderLevelSlots(shell, state) {
     ...LEVELS.map((level, index) => {
       const isDone = doneSet.has(level.id);
       const isOpen = !isDone && index <= available;
+      const isInProgress = !isDone && state.currentLevel === level.id && state.levelScenarioIndex > 0;
       const klass = isDone ? "is-done" : isOpen ? "is-open" : "is-locked";
       const statusText = isDone
         ? "Đã hoàn thành ✓"
-        : isOpen
-          ? `Mở khóa — bắt đầu Màn ${level.index}`
-          : `Khóa — hoàn thành Màn ${level.index - 1} trước`;
+        : isInProgress
+          ? `Đang chơi - tiếp tục Màn ${level.index}`
+          : isOpen
+            ? `Mở khóa - bắt đầu Màn ${level.index}`
+            : `Khóa - hoàn thành Màn ${level.index - 1} trước`;
       const button = el(
         "button",
         {
           type: "button",
-          class: "level-slot " + klass,
+          class: "level-slot " + klass + (isInProgress ? " is-inprogress" : ""),
           "data-level": level.id,
           title: `${level.thesis}\n${level.building} • Màn ${level.index}`,
           "aria-disabled": isOpen ? "false" : "true",
         },
         el("span", { class: "building-icon", text: level.icon }),
-        el("span", { class: "building-label", text: `Màn ${level.index} — ${level.building}` }),
+        el("span", { class: "building-label", text: `Màn ${level.index} - ${level.building}` }),
         el("span", { class: "building-name", text: level.title }),
         el("span", { class: "building-status", text: statusText })
       );
@@ -109,7 +112,7 @@ export function renderAreaLegend(shell) {
   if (!wrap) return;
   wrap.replaceChildren(
     ...AREAS.map((area) =>
-      el("span", { class: "area-tag", text: `${area.name} — ${area.desc}`, title: area.name })
+      el("span", { class: "area-tag", text: `${area.name} - ${area.desc}`, title: area.name })
     )
   );
 }
@@ -161,6 +164,20 @@ export function renderExplanation(shell, { scenario, choice, nextLabel }) {
   const correctBadge = shell.querySelector("#explanation-correct");
   if (correctBadge) correctBadge.hidden = choice.correct !== true;
 
+  const depthBox = shell.querySelector("#explanation-depth");
+  if (depthBox) {
+    if (choice.depth && typeof choice.depth === "string" && choice.depth.length > 0) {
+      depthBox.replaceChildren(
+        el("details", { class: "depth-dive" },
+          el("summary", { text: "Tìm hiểu sâu hơn" }),
+          el("div", { class: "depth-dive-body", text: choice.depth })
+        )
+      );
+    } else {
+      depthBox.replaceChildren();
+    }
+  }
+
   const entries = Object.entries(choice.deltas);
   const chips = entries.map(([key, delta]) => {
     const def = STAT_DEFS.find((d) => d.key === key);
@@ -172,9 +189,10 @@ export function renderExplanation(shell, { scenario, choice, nextLabel }) {
       el("strong", { text: `${sign}${delta}` })
     );
   });
-  shell.querySelector("#explanation-deltas").replaceChildren(
-    entries.length ? chips : el("span", { class: "delta-chip", text: "Không thay đổi chỉ số" })
-  );
+  const deltaChips = entries.length
+    ? chips
+    : [el("span", { class: "delta-chip", text: "Không thay đổi chỉ số" })];
+  shell.querySelector("#explanation-deltas").replaceChildren(...deltaChips);
 }
 
 const RESULT_COPY = {
@@ -246,7 +264,7 @@ export function renderKnowledgePage(shell, state) {
       group.append(
         el("div", { class: "knowledge-group-head" },
           el("span", { class: "knowledge-group-icon", text: level.icon }),
-          el("h3", { class: "knowledge-group-title", text: `Màn ${level.index} — ${level.title} (${level.building})` })
+          el("h3", { class: "knowledge-group-title", text: `Màn ${level.index} - ${level.title} (${level.building})` })
         )
       );
       if (levelById(level.id)) {

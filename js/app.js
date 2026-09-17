@@ -97,8 +97,14 @@ function startLevel(levelId) {
     showToast("Màn này chưa có nội dung.");
     return;
   }
-  state.currentLevel = levelId;
-  state.levelScenarioIndex = 0;
+  const canResume =
+    state.currentLevel === levelId &&
+    state.levelScenarioIndex > 0 &&
+    state.levelScenarioIndex < scenarios.length;
+  if (!canResume) {
+    state.currentLevel = levelId;
+    state.levelScenarioIndex = 0;
+  }
   persist();
   showLevelScreen();
 }
@@ -131,9 +137,10 @@ function onChoiceClick(event) {
   });
   const outcome = evaluateStatus(state.stats);
   state.status = outcome.status;
+  const isLast = state.levelScenarioIndex >= scenarios.length - 1;
+  state.levelScenarioIndex = Math.min(state.levelScenarioIndex + 1, scenarios.length);
   persist();
 
-  const isLast = state.levelScenarioIndex >= scenarios.length - 1;
   renderExplanation(document, {
     level: levelById(levelId),
     scenario,
@@ -144,8 +151,8 @@ function onChoiceClick(event) {
   if (outcome.status !== "playing") {
     showToast(
       outcome.status === "lost"
-        ? "Một chỉ số đã suy sụt — cộng đồng đứng trước khủng hoảng."
-        : "Ba trụ cột đang hài hòa — tiếp tục xây dựng!"
+        ? "Một chỉ số đã suy sụt - cộng đồng đứng trước khủng hoảng."
+        : "Ba trụ cột đang hài hòa - tiếp tục xây dựng!"
     );
   }
 }
@@ -160,9 +167,7 @@ function onNextAfterChoice() {
   }
   const levelId = state.currentLevel;
   const scenarios = scenariosForLevel(levelId);
-  const nextIndex = state.levelScenarioIndex + 1;
-  if (nextIndex < scenarios.length) {
-    state.levelScenarioIndex = nextIndex;
+  if (state.levelScenarioIndex < scenarios.length) {
     persist();
     showLevelScreen();
   } else {
@@ -191,8 +196,6 @@ function completeLevel(levelId) {
 }
 
 function exitLevel() {
-  state.currentLevel = null;
-  state.levelScenarioIndex = 0;
   persist();
   goMap();
 }
@@ -204,7 +207,7 @@ function onLevelSlotClick(event) {
   if (button.classList.contains("is-open")) {
     startLevel(level.id);
   } else if (button.classList.contains("is-done")) {
-    showToast(`Màn ${level.index} đã hoàn thành — sẽ ôn lại trong “Kiến thức đã học”`);
+    showToast(`Màn ${level.index} đã hoàn thành - sẽ ôn lại trong “Kiến thức đã học”`);
   } else {
     showToast(`Hoàn thành các màn trước để mở Màn ${level.index}`);
   }

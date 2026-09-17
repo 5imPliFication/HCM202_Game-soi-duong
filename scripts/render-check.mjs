@@ -76,14 +76,14 @@ class FakeElement {
   }
 
   append(...nodes) {
-    nodes.flat().filter((n) => n != null).forEach((n) => {
+    nodes.filter((n) => n != null).forEach((n) => {
       n.__parent = this;
       this.children.push(n);
     });
   }
 
   replaceChildren(...nodes) {
-    this.children = nodes.flat().filter((n) => n != null);
+    this.children = nodes.filter((n) => n != null);
     this.children.forEach((n) => (n.__parent = this));
   }
 
@@ -158,12 +158,31 @@ assert.equal(stub("#btn-scenario-next").textContent, "Tình huống tiếp theo 
 const chips = stub("#explanation-deltas").children;
 assert.equal(chips.length, Object.keys(scenario.choices[1].deltas).length);
 assert.ok(chips[0].classList.contains("is-up"));
+chips.forEach((chip) => {
+  assert.ok(chip.children[0], "chip has a stat name");
+  assert.match(chip.children[0].textContent, /^[\p{L} ]+$/u, "chip shows a clean stat name, not a stringified element");
+  assert.match(chip.children[1].textContent, /^[+-]\d+$/, "chip shows a numeric delta, not a stringified element");
+});
 const correctChoice = scenario.choices.find((c) => c.correct === true);
 const wrongChoice = scenario.choices.find((c) => c.correct !== true);
 renderExplanation(shell, { level, scenario, choice: correctChoice, nextLabel: "Tiếp →" });
 assert.equal(stub("#explanation-correct").hidden, false, "correct choice shows the badge");
 renderExplanation(shell, { level, scenario, choice: wrongChoice, nextLabel: "Tiếp →" });
 assert.equal(stub("#explanation-correct").hidden, true, "wrong choice hides the badge");
+
+const deepChoice = correctChoice.depth ? correctChoice : wrongChoice;
+if (deepChoice.depth) {
+  renderExplanation(shell, { level, scenario, choice: deepChoice, nextLabel: "Tiếp →" });
+  const depthNodes = stub("#explanation-depth").children;
+  assert.equal(depthNodes.length, 1, "choice with depth renders a details box");
+  assert.ok(depthNodes[0].classList.contains("depth-dive"));
+  assert.equal(depthNodes[0].children[0].textContent, "Tìm hiểu sâu hơn");
+  assert.ok(depthNodes[0].children[1].textContent.includes(deepChoice.depth), "depth body shows the deep text");
+}
+const noDepth = scenario.choices.find((c) => c.depth === undefined);
+assert.ok(noDepth, "m1 has a choice without depth");
+renderExplanation(shell, { level, scenario, choice: noDepth, nextLabel: "Tiếp →" });
+assert.equal(stub("#explanation-depth").children.length, 0, "no depth box when choice has no depth");
 
 renderResult(shell, {
   status: "won",
@@ -417,4 +436,23 @@ assert.ok(appScreens[4].classList.contains("active"), "lost result screen reache
 assert.equal(autoStub("#result-title").textContent, "Văn hóa suy kiệt");
 assert.equal(saved().status, "lost");
 
-console.log("OK — UI render, router & end-to-end boot checks passed");
+// Mid-level exit must be saved so re-entering resumes at the next scenario
+click(autoStub("#btn-new"));
+click(autoStub("#level-slots").children[0]);
+const resumeScenarios = scenariosForLevel("m1");
+click(autoStub("#scenario-choices").children[0]);
+assert.ok(appScreens[2].classList.contains("active"), "explanation active before exit");
+assert.equal(saved().levelScenarioIndex, 1, "answering scenario 0 advances the saved progress");
+click(autoStub("#btn-level-back"));
+assert.ok(appScreens[3].classList.contains("active"), "map active after mid-level exit");
+assert.equal(saved().currentLevel, "m1", "in-progress level preserved on exit");
+assert.ok(
+  autoStub("#level-slots").children[0].classList.contains("is-inprogress"),
+  "map flags the in-progress level"
+);
+click(autoStub("#level-slots").children[0]);
+assert.ok(appScreens[1].classList.contains("active"), "level screen active after re-entry");
+assert.equal(autoStub("#scenario-title").textContent, resumeScenarios[1].title, "resumes at the second scenario");
+assert.equal(autoStub("#level-progress").textContent, "Tình huống 2/3", "progress label reflects resume point");
+
+console.log("OK - UI render, router & end-to-end boot checks passed");

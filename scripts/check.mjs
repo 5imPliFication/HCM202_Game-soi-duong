@@ -121,6 +121,10 @@ for (const [levelId, scenarios] of Object.entries(SCENARIOS)) {
         assert.ok(typeof choice[field] === "string" && choice[field].length > 0,
           `${scenario.id}: choice missing ${field}`);
       }
+      if (choice.depth !== undefined) {
+        assert.ok(typeof choice.depth === "string" && choice.depth.length > 0,
+          `${scenario.id}: "depth" must be a non-empty string when present`);
+      }
       assert.ok(typeof choice.deltas === "object" && choice.deltas !== null,
         `${scenario.id}: choice needs deltas`);
       for (const [key, delta] of Object.entries(choice.deltas)) {
@@ -199,4 +203,4 @@ function playAll(pick) {
     "playing every worst choice must not win the game");
 }
 
-console.log("OK — all stats, state, content & flow assertions passed");
+console.log("OK - all stats, state, content & flow assertions passed");

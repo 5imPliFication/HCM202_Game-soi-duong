@@ -16,7 +16,9 @@ export const SCENARIOS = {
           hint: "Chấp nhận quan niệm hẹp, coi văn hóa chỉ là lễ hội, văn nghệ.",
           deltas: { khoahoc: -6, trithuc: -5, daichung: -3 },
           explanation:
-            "Quan niệm hẹp tách văn hóa ra khỏi đời sống. Theo Hồ Chí Minh, văn hóa có nghĩa rộng — học tập, đạo đức, lao động, vệ sinh, phong tục đều là những biểu hiện do con người sáng tạo ra để đáp ứng nhu cầu sống, không chỉ là lễ hội.",
+            "Quan niệm hẹp tách văn hóa ra khỏi đời sống. Theo Hồ Chí Minh, văn hóa có nghĩa rộng - học tập, đạo đức, lao động, vệ sinh, phong tục đều là những biểu hiện do con người sáng tạo ra để đáp ứng nhu cầu sống, không chỉ là lễ hội.",
+          depth:
+            "Nếu coi văn hóa chỉ là lễ hội, ca hát thì giáo dục, lao động, vệ sinh sẽ bị xếp ra ngoài phạm vi cần chăm lo. Theo quan niệm của Hồ Chí Minh, một dân tộc vừa dốt vừa không biết cách tổ chức đời sống thì khó đứng vững. Cách nhìn hẹp này khiến cộng đồng dễ bỏ bê tri thức và lối sống - chính là gieo mầm cho những lệch lạc về sau.",
         },
         {
           label: "“Bác ơi, học chữ, làm ruộng sạch sẽ, giữ vệ sinh cũng là văn hóa; văn hóa bao trùm cả đời sống, chứ không chỉ lễ hội.”",
@@ -25,6 +27,8 @@ export const SCENARIOS = {
           deltas: { dantoc: 3, khoahoc: 3, trithuc: 2 },
           explanation:
             "Đúng tinh thần “văn hóa có nghĩa rộng”: các hoạt động học tập, lao động, vệ sinh và lối sống đều là biểu hiện văn hóa do con người sáng tạo ra để đáp ứng nhu cầu sống. Văn hóa không chỉ là văn học, nghệ thuật hay lễ hội.",
+          depth:
+            "Đề cương văn hóa Việt Nam năm 1943 đã nêu ba nguyên tắc xây dựng nền văn hóa mới: dân tộc hóa, khoa học hóa và đại chúng hóa. Từ đó, Hồ Chí Minh thường nhắc rằng văn hóa không dừng ở văn nghệ, lễ hội; nó hiện diện khắp nơi trong cách ăn, ở, mặc, học tập, lao động, vệ sinh và giao tiếp. Hiểu đúng nghĩa rộng này giúp cộng đồng không tách “chuyện làm ăn” với “chuyện văn hóa”, mà thấy mọi mặt đời sống đều cần được nâng lên - đó là gốc để xây đời sống mới sau này.",
         },
         {
           label: "“Chuyện này không quan trọng; cứ theo ý bác, miễn là làng đừng gây lộn.”",
@@ -58,6 +62,8 @@ export const SCENARIOS = {
           deltas: { khoahoc: 3, trithuc: 4, daichung: 3 },
           explanation:
             "Văn hóa có nghĩa rộng: học tập, ý thức pháp luật, lao động sản xuất, lối sống đều là phương thức sinh hoạt do con người tạo ra để đáp ứng nhu cầu sống. Mỗi việc trên đều là biểu hiện văn hóa của cộng đồng.",
+          depth:
+            "Hồ Chí Minh xác định văn hóa gắn bó mật thiết với chính trị và kinh tế: nó không đứng ngoài mà thấm vào cách tổ chức đời sống, cách mọi người hợp tác và cách sản xuất được nâng cấp. Trong thực tiễn Việt Nam, phong trào bình dân học vụ, vệ sinh phòng bệnh, đời sống mới đều là những hoạt động văn hóa theo nghĩa rộng chứ không phải việc riêng của từng ngành. Xếp chúng vào chung một kế hoạch là cách làm đúng tinh thần một nền văn hóa dân tộc, khoa học, đại chúng.",
         },
         {
           label: "Chỉ việc tu sửa đình, mở hội là văn hóa; còn học chữ, giữ trật tự, làm ăn tính riêng.",
@@ -98,6 +104,8 @@ export const SCENARIOS = {
           deltas: { dantoc: 2, khoahoc: 2, daichung: 3, trithuc: 2 },
           explanation:
             "Hồ Chí Minh xác định văn hóa vừa là mục tiêu của cách mạng (độc lập, tự do, hạnh phúc, đời sống tốt đẹp) vừa là động lực (tri thức, đạo đức, yêu nước, đoàn kết). Văn hóa soi đường cho quốc dân đi.",
+          depth:
+            "Kháng chiến kiến quốc lúc khó khăn, Hồ Chí Minh vẫn khẳng định văn hóa không phải “lo sau”, mà phải “soi đường cho quốc dân đi”. Văn hóa vừa là mục tiêu phấn đấu (đời sống ấm no, tự do, hạnh phúc, dân chủ) vừa là động lực (tri thức, đạo đức, lòng yêu nước, sự đoàn kết giúp quốc dân vượt gian khó). Quan niệm này giải thích vì sao hoạt động văn hóa của làng không phải khoản chi “phù phiếm” mà là khoản đầu tư nền tảng cho mọi việc khác.",
         },
         {
           label: "Văn hóa chỉ để giải trí, thư giãn sau những buổi lao động mệt nhọc.",
@@ -114,11 +122,11 @@ export const SCENARIOS = {
             "Chỉ giữ gìn bề nổi mà thiếu chiều khoa học, tiến bộ có thể dẫn tới bảo thủ. Văn hóa phải giúp phân biệt tiến bộ với lạc hậu, không phải giữ nguyên hoặc xóa bỏ máy móc.",
         },
         {
-          label: "Văn hóa phục vụ nhân dân; ai cũng được học, được hưởng — đó là việc chung của cả làng.",
+          label: "Văn hóa phục vụ nhân dân; ai cũng được học, được hưởng - đó là việc chung của cả làng.",
           hint: "Đặt nhân dân làm trung tâm của hoạt động văn hóa.",
           deltas: { daichung: 7, trithuc: 6, doanket: 3 },
           explanation:
-            "Văn hóa phải thuộc về và phục vụ nhân dân, hướng tới lợi ích của quần chúng — nền tảng của tính đại chúng. Văn hóa phổ biến cho mọi người cũng chính là xây dựng sức mạnh cộng đồng.",
+            "Văn hóa phải thuộc về và phục vụ nhân dân, hướng tới lợi ích của quần chúng - nền tảng của tính đại chúng. Văn hóa phổ biến cho mọi người cũng chính là xây dựng sức mạnh cộng đồng.",
         },
       ],
     },
@@ -134,11 +142,11 @@ export const SCENARIOS = {
       prompt: "Anh tổ chức lớp học đầu tiên của làng thế nào?",
       choices: [
         {
-          label: "Huy động những người biết chữ — kể cả phụ nữ và thanh niên — làm thầy, mở lớp buổi tối cho bà con.",
+          label: "Huy động những người biết chữ - kể cả phụ nữ và thanh niên - làm thầy, mở lớp buổi tối cho bà con.",
           hint: "Dựa vào lực lượng tại chỗ để mở lớp ngay từ những ngày đầu.",
           deltas: { trithuc: 7, daichung: 6, doanket: 4 },
           explanation:
-            "Đúng phương châm bình dân học vụ: ai biết chữ dạy người chưa biết chữ. Hồ Chí Minh chủ trương dựa vào nhân dân, chống giặc dốt như chống giặc đói, giặc ngoại xâm — việc học của làng do chính làng đảm đương.",
+            "Đúng phương châm bình dân học vụ: ai biết chữ dạy người chưa biết chữ. Hồ Chí Minh chủ trương dựa vào nhân dân, chống giặc dốt như chống giặc đói, giặc ngoại xâm - việc học của làng do chính làng đảm đương.",
         },
         {
           label: "Chờ huyện cử giáo viên và cấp trường chính quy, khi nào có đủ thì mới mở lớp.",
@@ -160,7 +168,9 @@ export const SCENARIOS = {
           correct: true,
           deltas: { trithuc: 6, daichung: 2, kinhte: 1 },
           explanation:
-            "Học đi đôi với hành, lý luận gắn liền với thực tế. Sắp xếp việc học theo nhịp sống lao động vừa nâng cao dân trí vừa không cản trở sản xuất — cách làm thiết thực của chủ trương chống giặc dốt.",
+            "Học đi đôi với hành, lý luận gắn liền với thực tế. Sắp xếp việc học theo nhịp sống lao động vừa nâng cao dân trí vừa không cản trở sản xuất - cách làm thiết thực của chủ trương chống giặc dốt.",
+          depth:
+            "Ngay sau Cách mạng Tháng Tám, Hồ Chí Minh kêu gọi toàn dân chống “giặc dốt” với khẩu hiệu “Một dân tộc dốt là một dân tộc yếu”. Phong trào bình dân học vụ lan khắp nơi: ai biết chữ dạy người chưa biết chữ, lớp học mở ngay ở nhà dân, đình làng và sắp theo nhịp thời vụ để không cản trở sản xuất. Xếp việc học vào lúc nông nhàn, cho trẻ lớp ngày và người lớn lớp tối là cách làm rất thực tế của phong trào đó - nâng dân trí ngay trong điều kiện còn nghèo khó.",
         },
       ],
     },
@@ -187,6 +197,8 @@ export const SCENARIOS = {
           deltas: { trithuc: 5, daichung: 3, daoduc: 2, doanket: 3 },
           explanation:
             "Tính đại chúng đòi hỏi văn hóa đến với trẻ em, phụ nữ, người nghèo và người lao động. Hồ Chí Minh coi phụ nữ là một nửa nhân loại, cần được bình đẳng trong học tập và tham gia đời sống xã hội.",
+          depth:
+            "Giáo dục của chế độ mới hướng tới mọi người, nhất là trẻ em, phụ nữ và người nghèo - những người xưa nay ít được đến trường. Hồ Chí Minh nhấn mạnh phụ nữ là lực lượng quan trọng của cách mạng, nên giải phóng xã hội phải đi liền với việc phụ nữ được học tập và tham gia công việc chung. Gỡ rào cản cụ thể (cấp giấy bút cho nhà nghèo, giờ học thuận tiện cho chị em) chính là làm đúng tinh thần đại chúng hóa giáo dục: tri thức phải tự do đến với mọi nhà, không chờ mọi người tự tìm đến.",
         },
         {
           label: "Cấm nghỉ học; gia đình nào không cho con đi học sẽ bị nêu tên giữa chợ.",
@@ -225,7 +237,7 @@ export const SCENARIOS = {
           hint: "Dựa vào sức dân, góp công góp của để giữ lớp học.",
           deltas: { doanket: 6, trithuc: 5, kinhte: 3 },
           explanation:
-            "Khó khăn được hóa giải bằng tinh thần đoàn kết, tương thân tương ái. Hồ Chí Minh nhấn mạnh sức mạnh của tập thể và sự đùm bọc trong cộng đồng — nền tảng của xã hội mới.",
+            "Khó khăn được hóa giải bằng tinh thần đoàn kết, tương thân tương ái. Hồ Chí Minh nhấn mạnh sức mạnh của tập thể và sự đùm bọc trong cộng đồng - nền tảng của xã hội mới.",
         },
         {
           label: "Chỉ cần một người kiên trì bám lớp; còn lại không cần góp sức.",
@@ -241,6 +253,8 @@ export const SCENARIOS = {
           deltas: { khoahoc: 5, trithuc: 4, daoduc: 3, kinhte: 2 },
           explanation:
             "Tạo điều kiện thiết thực cho người học, đặc biệt người lao động và vùng khó khăn, là biểu hiện của tính đại chúng. Văn hóa phục vụ nhân dân phải được tổ chức theo điều kiện thực tế của nhân dân.",
+          depth:
+            "“Vì lợi ích trăm năm phải trồng người” - Hồ Chí Minh căn dặn như vậy để thấy giáo dục là việc dài hơi, không được gián đoạn vì khó khăn nhất thời. Bài học của phong trào bình dân học vụ là dựa vào chính nhân dân: mượn nhà làm lớp, phân công phụ nữ và thanh niên phụ trách từng khu, biến mỗi gia đình thành một bộ phận của trường học. Đưa lớp về gần dân vừa giữ được việc học vừa vun đắp tinh thần tương thân tương ái giữa các nhà.",
         },
       ],
     },
@@ -276,6 +290,8 @@ export const SCENARIOS = {
           deltas: { dantoc: 5, daichung: 2, doanket: 3 },
           explanation:
             "Đây là cách làm đúng tinh thần dân tộc – khoa học – đại chúng: giữ giá trị tốt đẹp, loại bỏ mê tín lãng phí và để nhân dân cùng tham gia. Văn hóa phải phục vụ quần chúng, không phải chỉ cho vài nhà.",
+          depth:
+            "Đề cương văn hóa Việt Nam và tư tưởng của Hồ Chí Minh đều yêu cầu “dân tộc hóa”: văn hóa phải giữ bản sắc, nhưng giữ gìn không có nghĩa giữ nguyên. Bảo tồn nghi lễ tiêu biểu, bỏ hình thức mê tín tốn kém và để cả làng tham gia là cách chọn lọc có khoa học: cái đẹp, cái gắn kết cộng đồng được giữ, cái lãng phí, mê muội được bỏ. Lễ hội vì thế trở thành sinh hoạt của quần chúng chứ không phải việc riêng của vài nhà khá giả.",
         },
         {
           label: "Sao chép nguyên khuôn mẫu một lễ hội nước ngoài cho mới lạ, hút khách.",
@@ -300,7 +316,9 @@ export const SCENARIOS = {
           hint: "Ôm trọn tập tục tốn kém đè nặng nhà nghèo.",
           deltas: { dantoc: 3, kinhte: -5, daichung: -4 },
           explanation:
-            "Không phải mọi phong tục đều đáng giữ. Tập tục thách cưới cao gây hậu quả kinh tế cho nhà nghèo và đi ngược tinh thần xây dựng đời sống mới — văn hóa phải giúp phân biệt tốt đẹp với lạc hậu.",
+            "Không phải mọi phong tục đều đáng giữ. Tập tục thách cưới cao gây hậu quả kinh tế cho nhà nghèo và đi ngược tinh thần xây dựng đời sống mới - văn hóa phải giúp phân biệt tốt đẹp với lạc hậu.",
+          depth:
+            "Có những tập tục được gọi là “chuyện cha ông” nhưng thực chất là gánh nặng đè lên nhà nghèo. Hồ Chí Minh từng chỉ rõ việc thách cưới, cúng bái tốn kém cần được bài trừ để nhân dân đỡ gánh, trong khi những giá trị khác như lễ nghĩa, tình cảm sum vầy vẫn nguyên giá trị. Giữ nguyên thói tốn kém vì ngại đổi thay là níu giữ cái vỏ mà đánh mất cái hồn của phong tục.",
         },
         {
           label: "Bỏ hẳn mọi nghi lễ cưới xin để tiết kiệm triệt để.",
@@ -316,6 +334,8 @@ export const SCENARIOS = {
           deltas: { dantoc: 3, kinhte: 5, doanket: 3 },
           explanation:
             "Bảo tồn giá trị tốt đẹp, cải biến yếu tố lạc hậu là nguyên tắc của tính dân tộc. Vừa giữ ý nghĩa nhân văn, vừa tiết kiệm cho nhân dân chính là làm đúng tinh thần đời sống mới.",
+          depth:
+            "Trong tác phẩm “Đời sống mới”, Hồ Chí Minh kêu gọi cải cách việc cưới, việc tang, lễ tết theo hướng lành mạnh, tiết kiệm và tôn trọng tình người. Tục thách cưới cao khiến nhà nghèo lấy vợ gả chồng khó khăn, vừa tốn kém vừa sinh ra sự so đo - đó là yếu tố lạc hậu cần bỏ. Giữ nghi lễ sum vầy, dẹp chuyện thách cưới vừa giữ được tình làng nghĩa xóm vừa tạo nếp sống mới phù hợp với điều kiện vật chất của người dân.",
         },
         {
           label: "Lập quỹ làng hỗ trợ nhà nghèo tổ chức đám cưới tiết kiệm, cả làng cùng vui.",
@@ -347,7 +367,7 @@ export const SCENARIOS = {
           hint: "Dùng biện pháp cấm đoán cứng nhắc, thiếu giáo dục.",
           deltas: { dantoc: 3, trithuc: -3, doanket: -3 },
           explanation:
-            "Cấm đoán máy móc dễ phản tác dụng. Giữ gìn tiếng Việt cần bằng giáo dục, nêu gương, xây dựng ý thức chứ không phải cưỡng chế — đúng phương pháp vận động trong đời sống mới.",
+            "Cấm đoán máy móc dễ phản tác dụng. Giữ gìn tiếng Việt cần bằng giáo dục, nêu gương, xây dựng ý thức chứ không phải cưỡng chế - đúng phương pháp vận động trong đời sống mới.",
         },
         {
           label: "Mở diễn đàn, thi viết chữ đẹp, dạy trẻ yêu tiếng mẹ đẻ qua ca dao, truyện cổ; đồng thời khuyến khích học ngoại ngữ có mục đích.",
@@ -356,6 +376,8 @@ export const SCENARIOS = {
           deltas: { dantoc: 4, daoduc: 4, doanket: 3, kinhte: 5 },
           explanation:
             "Giữ gìn tiếng Việt, lịch sử, truyền thống là biểu hiện của tính dân tộc; học ngoại ngữ có mục đích là biểu hiện của tính khoa học. Cân bằng cả hai giúp dân tộc vừa giữ cội nguồn vừa tiến bộ.",
+          depth:
+            "Hồ Chí Minh coi tiếng nói là thứ của cải vô cùng lâu đời và vô cùng quý báu của dân tộc, phải giữ gìn, đồng thời khuyến khích tiếp thu tinh hoa nhân loại. Giữ tiếng Việt không có nghĩa bài trừ tiếng nước ngoài; ngược lại, học ngoại ngữ có mục đích giúp mở mang tri thức. Vừa dạy trẻ yêu tiếng mẹ đẻ qua ca dao, truyện cổ, vừa khuyến khích học ngoại ngữ để hòa nhập là cách dung hòa dân tộc hóa với khoa học hóa - không khép kín cũng không hòa tan bản sắc.",
         },
         {
           label: "Tuyệt đối cấm tiếng nước ngoài trong làng để giữ gìn sự thuần khiết.",
@@ -363,6 +385,8 @@ export const SCENARIOS = {
           deltas: { dantoc: 3, khoahoc: -4, trithuc: -3 },
           explanation:
             "Giữ gìn bản sắc không có nghĩa khép kín. Tính khoa học đòi hỏi tiếp thu cái hay, cái tiến bộ của thế giới; bảo thủ khiến dân tộc tụt hậu, xa rời sự phát triển chung.",
+          depth:
+            "Cấm hẳn tiếng nước ngoài nghe giống “bảo vệ bản sắc” nhưng lại phản lại tinh thần khoa học trong tư tưởng của Hồ Chí Minh: Người đã đi nhiều nước và tiếp thu tinh hoa của nhân loại để phục vụ dân tộc, chứ không cô lập mình. Dân tộc hóa không có nghĩa khép kín; một dân tộc khép kín sẽ tụt hậu, và bản sắc cũng khó phát huy trong thế giới giao lưu. Bảo vệ tiếng Việt đúng cách là nâng cao sự trong sáng, tinh tế của nó chứ không phải dựng hàng rào cấm đoán.",
         },
       ],
     },
@@ -390,7 +414,9 @@ export const SCENARIOS = {
           correct: true,
           deltas: { khoahoc: 7, trithuc: 3, phucloi: 7 },
           explanation:
-            "Dùng khoa học và bằng chứng để xóa tin đồn: nước được kiểm tra, ánh sáng xua tan bóng tối. Đây là biểu hiện trực tiếp của tính khoa học — chống mê tín bằng sự thật, không phải bằng cấm đoán.",
+            "Dùng khoa học và bằng chứng để xóa tin đồn: nước được kiểm tra, ánh sáng xua tan bóng tối. Đây là biểu hiện trực tiếp của tính khoa học - chống mê tín bằng sự thật, không phải bằng cấm đoán.",
+          depth:
+            "Câu chuyện “ma giếng” là một hiện tượng tâm lý điển hình của làng quê xưa, và Hồ Chí Minh chủ trương bài trừ mê tín dị đoan bằng cách làm cho dân hiểu, dân tin rồi dân làm - tức dùng sự thật và kết quả cụ thể thuyết phục, không ra lệnh cấm. Kiểm tra nguồn nước bằng y tế và thắp sáng khu giếng ban đêm là đưa đến hai “liều thuốc”: bằng chứng khoa học phá bỏ ảo tưởng, và ánh sáng xua tan bóng tối khiến điều bí ẩn tự biến mất.",
         },
         {
           label: "Theo ý dân, che giếng lại, làm một bữa lễ cúng cho làng yên chuyện.",
@@ -398,6 +424,8 @@ export const SCENARIOS = {
           deltas: { khoahoc: -6, phucloi: -3, dantoc: -2 },
           explanation:
             "Nhượng bộ mê tín khiến đời sống tiếp tục bị lệ thuộc vào tin đồn, xa rời phương pháp khoa học. Hồ Chí Minh chủ trương bài trừ mê tín dị đoan, mê tín không mang lại nước sạch hay sức khỏe cho dân.",
+          depth:
+            "Nhượng bộ mê tín để “cho làng yên” thực chất càng củng cố niềm tin sai lệch: mai này gặp ốm đau, việc làm ăn, người ta lại tìm đến cúng bái thay vì khoa học. Cách xử lý của Hồ Chí Minh thì ngược lại: cán bộ phải kiên trì giải thích, nêu gương và đem lại lợi ích cụ thể để nhân dân tự rời bỏ mê tín. Nước sạch và sức khỏe chỉ đến từ y tế, vệ sinh chứ không phải từ lễ cúng.",
         },
         {
           label: "Phát tờ rơi chê bai, mỉa mai những nhà còn tin chuyện ma quỷ.",
@@ -430,7 +458,9 @@ export const SCENARIOS = {
           correct: true,
           deltas: { khoahoc: 6, phucloi: 8, daichung: 6, daoduc: 3 },
           explanation:
-            "Phòng chống dịch bằng khoa học: khám, cách ly, giải thích đường lây. Đây là áp dụng tri thức và phương pháp tiến bộ vào đời sống — cốt lõi của tính khoa học nhằm bảo vệ sức khỏe và phúc lợi nhân dân.",
+            "Phòng chống dịch bằng khoa học: khám, cách ly, giải thích đường lây. Đây là áp dụng tri thức và phương pháp tiến bộ vào đời sống - cốt lõi của tính khoa học nhằm bảo vệ sức khỏe và phúc lợi nhân dân.",
+          depth:
+            "Trong xây dựng đời sống mới, Hồ Chí Minh nhiều lần nhắc tới vệ sinh, phòng bệnh như một hoạt động văn hóa quan trọng của cộng đồng. Phòng sốt bằng khám, cách ly và tuyên truyền đường lây đúng phương pháp y tế là cách khoa học che chở cho phúc lợi nhân dân. Điều đáng chú ý còn ở cách làm: dân được giải thích cặn kẽ để tự hiểu, tự phòng tránh - vừa khoa học vừa đại chúng.",
         },
         {
           label: "Cưỡng bức mọi phải tiêm thuốc do cán bộ chỉ định, ai không nghe thì phạt.",
@@ -438,13 +468,15 @@ export const SCENARIOS = {
           deltas: { doanket: -4, daichung: -2, phucloi: 3 },
           explanation:
             "Dù bảo vệ sức khỏe nhưng cưỡng chế, phạt vạ đi ngược phương pháp dân vận. Hồ Chí Minh căn dặn phải giải thích cho dân hiểu, dân tin rồi dân làm, chứ không ép buộc.",
+          depth:
+            "Dù động cơ là bảo vệ sức khỏe, ép buộc và phạt vạ vẫn đi ngược phương pháp dân vận mà Hồ Chí Minh hằng nhắc: phải giải thích cho dân hiểu, dân tin, dân theo, rồi dân làm. Cưỡng bức biến việc tốt thành gánh nặng, nhân dân mất lòng tin vào chính quyền và phong trào dễ tan khi áp lực dừng lại. Muốn bảo vệ sức khỏe lâu dài, trước hết phải giành được lòng dân.",
         },
         {
           label: "Phát tờ rơi mỉa mai những nhà còn cúng bái lúc dịch bệnh.",
           hint: "Biến việc vận động thành sự chỉ trích, gây chia rẽ.",
           deltas: { khoahoc: 3, doanket: -5, daichung: -3 },
           explanation:
-            "Chê bai, mỉa mai làm giảm lòng tin và chia rẽ làng xóm. Vận động quần chúng phải tôn trọng, kiên trì, vừa tuyên truyền vừa giúp đỡ cụ thể — đúng tinh thần đại chúng.",
+            "Chê bai, mỉa mai làm giảm lòng tin và chia rẽ làng xóm. Vận động quần chúng phải tôn trọng, kiên trì, vừa tuyên truyền vừa giúp đỡ cụ thể - đúng tinh thần đại chúng.",
         },
       ],
     },
@@ -463,7 +495,9 @@ export const SCENARIOS = {
           correct: true,
           deltas: { khoahoc: 7, trithuc: 4, kinhte: 8, daoduc: 2 },
           explanation:
-            "Phương pháp khoa học: thí nghiệm, quan sát, so sánh bằng chứng. Hồ Chí Minh căn dặn học phải đi đôi với hành, lý luận gắn liền thực tế — làm thử rồi lấy kết quả thực tế thuyết phục nhân dân.",
+            "Phương pháp khoa học: thí nghiệm, quan sát, so sánh bằng chứng. Hồ Chí Minh căn dặn học phải đi đôi với hành, lý luận gắn liền thực tế - làm thử rồi lấy kết quả thực tế thuyết phục nhân dân.",
+          depth:
+            "Hồ Chí Minh căn dặn học phải đi đôi với hành, lý luận gắn liền với thực tế - và tinh thần đó áp dụng thẳng vào chuyện làm ruộng. Làm thí điểm một thửa ruộng, ghi chép so sánh năng suất rồi mời dân bàn bằng con số là đúng chu trình khoa học: quan sát, đo đếm, thử nghiệm trước khi thay đổi quy mô. Người nông dân chỉ tin điều mình tận mắt thấy, nên kết quả thực tế là lời thuyết phục mạnh nhất, hơn mọi lời hô hào.",
         },
         {
           label: "Ép cả làng làm ngay theo cách mới, ai không làm thì không được dự họp.",
@@ -484,7 +518,7 @@ export const SCENARIOS = {
           hint: "Vừa tiến hành thực nghiệm vừa động viên nhân dân học hỏi.",
           deltas: { doanket: 5, trithuc: 5, kinhte: 4 },
           explanation:
-            "Lấy việc làm thực tế làm lời thuyết phục, lấy những hộ tiên phong làm gương. Cách này vừa tôn trọng sự tự nguyện của dân vừa phổ biến tri thức khoa học — kết hợp tính khoa học với tính đại chúng.",
+            "Lấy việc làm thực tế làm lời thuyết phục, lấy những hộ tiên phong làm gương. Cách này vừa tôn trọng sự tự nguyện của dân vừa phổ biến tri thức khoa học - kết hợp tính khoa học với tính đại chúng.",
         },
       ],
     },
@@ -504,7 +538,7 @@ export const SCENARIOS = {
           hint: "Bỏ mặc một bộ phận nhân dân ở vùng khó khăn.",
           deltas: { daichung: -7, trithuc: -4, phucloi: -3 },
           explanation:
-            "Văn hóa phải đến với mọi người, nhất là vùng khó khăn. Từ chối chăm lo cho xóm xa là đi ngược tính đại chúng — văn hóa không thuộc riêng ai, không dừng ở làng chính.",
+            "Văn hóa phải đến với mọi người, nhất là vùng khó khăn. Từ chối chăm lo cho xóm xa là đi ngược tính đại chúng - văn hóa không thuộc riêng ai, không dừng ở làng chính.",
         },
         {
           label: "Vận động các gia đình gửi con xuống làng chính ở trọ để học.",
@@ -520,6 +554,8 @@ export const SCENARIOS = {
           deltas: { dantoc: 2, daichung: 6, trithuc: 5, phucloi: 7 },
           explanation:
             "Mang việc học đến tận dân, dựa vào dân là phương châm của nền giáo dục mới. Tính đại chúng đòi hỏi tạo cơ hội tiếp cận giáo dục cho mọi trẻ em vùng xa, người nghèo.",
+          depth:
+            "Văn hóa phải thuộc về toàn dân, người vùng sâu, vùng xa cũng như người ở làng chính. Phong trào bình dân học vụ trước đây làm được điều này bằng cách đưa lớp học đến tận làng và dựa vào người biết chữ tại chỗ, vì chờ trường chính quy tới vùng xa thì sẽ phải đợi rất lâu. Mở lớp bản nhỏ, giáo viên luân phiên lên dạy, cấp sách vở cho học trò vừa tôn trọng điều kiện của người nghèo vừa khẳng định tiến bộ phải đến với miền xuôi lẫn miền ngược như nhau.",
         },
         {
           label: "Xin huyện hỗ trợ một phòng học bán trú và giáo viên cắm bản.",
@@ -544,7 +580,9 @@ export const SCENARIOS = {
           hint: "Gạt phụ nữ ra ngoài đời sống văn hóa – xã hội.",
           deltas: { daichung: -7, daoduc: -4, trithuc: -2 },
           explanation:
-            "Văn hóa thuộc về nhân dân, phụ nữ là một nửa nhân dân. Gạt chị em ra ngoài khiến họ không được học, không được tham gia bàn việc chung — đi ngược quyền bình đẳng trong xã hội mới.",
+            "Văn hóa thuộc về nhân dân, phụ nữ là một nửa nhân dân. Gạt chị em ra ngoài khiến họ không được học, không được tham gia bàn việc chung - đi ngược quyền bình đẳng trong xã hội mới.",
+          depth:
+            "Nói “chị em bận việc nhà” thực chất là thói quen xem phụ nữ chỉ thuộc về bếp núc, con cái - một quan niệm lạc hậu mà nền văn hóa mới phải thay đổi. Hồ Chí Minh xem phụ nữ là lực lượng quan trọng của cách mạng, phải được học tập và tham gia công việc xã hội như nam giới. Gạt họ ra khỏi các buổi bàn việc làng là tự triệt tiêu một nửa sức mạnh của cộng đồng; giải phóng phụ nữ chính là giải phóng xã hội.",
         },
         {
           label: "Mở lớp tối cho chị em, xếp thời gian học ngắn gọn, giao hội phụ nữ quản lý, mời đại diện chị em dự họp làng.",
@@ -553,6 +591,8 @@ export const SCENARIOS = {
           deltas: { daichung: 6, trithuc: 5, doanket: 4 },
           explanation:
             "Tính đại chúng đòi hỏi văn hóa đến với phụ nữ và mọi tầng lớp. Hồ Chí Minh coi giải phóng phụ nữ là một nội dung lớn; cho chị em học và tham gia công việc xã hội là phát huy sức mạnh toàn dân.",
+          depth:
+            "Hồ Chí Minh rất trân trọng vai trò của phụ nữ: Người nhấn mạnh phụ nữ là lực lượng quan trọng của cách mạng, giải phóng phụ nữ gắn liền với giải phóng dân tộc và giai cấp. Trong xã hội cũ, những chuẩn mực cổ hủ đã tước đi quyền học tập và tiếng nói của chị em; xây dựng nền văn hóa mới phải phá bỏ rào cản đó. Lớp tối cho chị em, giao hội phụ nữ tự quản lý và mời đại diện chị em dự họp làng là cách làm cho văn hóa thực sự thuộc về toàn dân.",
         },
         {
           label: "Chỉ nên dạy chị em nội trợ, khâu vá; chữ nghĩa nhiều không cần thiết.",
@@ -592,7 +632,9 @@ export const SCENARIOS = {
           correct: true,
           deltas: { dantoc: 2, daichung: 5, trithuc: 5, phucloi: 7 },
           explanation:
-            "Văn hóa phải được tổ chức theo điều kiện của quần chúng lao động. Hồ Chí Minh chủ trương mọi hình thức học linh hoạt để “mọi người dân được học” — học mọi lúc, mọi nơi.",
+            "Văn hóa phải được tổ chức theo điều kiện của quần chúng lao động. Hồ Chí Minh chủ trương mọi hình thức học linh hoạt để “mọi người dân được học” - học mọi lúc, mọi nơi.",
+          depth:
+            "Văn hóa vì nhân dân lao động phải được tổ chức theo nhịp sống của họ, không bắt họ hy sinh lúc đang làm việc. Hồ Chí Minh chủ trương mọi người đều được học, học mọi lúc, mọi nơi, bằng nhiều hình thức linh hoạt: học ngay tại nơi làm việc trong giờ giải lao, nghe tóm tắt bài, đọc tài liệu lúc nông nhàn. Đưa lớp đến tận chỗ lao động vừa nâng dân trí vừa tôn trọng sức người thợ - một cách làm vừa thực tế vừa nhân văn.",
         },
         {
           label: "Giảm giờ làm cho cả làng để ai cũng có thời gian đến lớp.",
@@ -626,7 +668,7 @@ export const SCENARIOS = {
           hint: "Chỉ chú trọng một mặt, đặt kinh tế tách rời văn hóa.",
           deltas: { kinhte: 7, khoahoc: -4, daichung: -5 },
           explanation:
-            "Văn hóa gắn bó với chính trị và kinh tế, tác động qua lại. Dồn hết cho kinh tế mà bỏ văn hóa khiến đời sống tinh thần trống rỗng, quần chúng mất động lực — không thể xây dựng cộng đồng toàn diện.",
+            "Văn hóa gắn bó với chính trị và kinh tế, tác động qua lại. Dồn hết cho kinh tế mà bỏ văn hóa khiến đời sống tinh thần trống rỗng, quần chúng mất động lực - không thể xây dựng cộng đồng toàn diện.",
         },
         {
           label: "Làm văn hóa suốt năm, tổ chức nhiều hoạt động biểu diễn, tạm hoãn cải tiến sản xuất.",
@@ -642,6 +684,8 @@ export const SCENARIOS = {
           deltas: { khoahoc: 5, kinhte: 4, daichung: 4, doanket: 2 },
           explanation:
             "Đúng năm điểm lớn xây dựng nền văn hóa dân tộc: tâm lý, luân lý, xã hội, chính trị, kinh tế phải phát triển đồng bộ. Một cộng đồng vững mạnh khi mọi mặt đời sống được chăm lo cân bằng.",
+          depth:
+            "Năm điểm lớn xây dựng nền văn hóa dân tộc của Hồ Chí Minh gồm tâm lý, luân lý, xã hội, chính trị và kinh tế - có nghĩa văn hóa không chỉ là đời sống tinh thần mà là cách tổ chức toàn bộ đời sống. Kế hoạch vừa cải tiến sản xuất, vừa lo vệ sinh – sức khỏe, lớp học, sinh hoạt làng và dân chủ trong họp bàn đã bao quát đủ năm mặt ấy. Các mặt tác động qua lại: kinh tế làm nền tảng, tri thức và đạo đức định hướng, đoàn kết giữ cho mọi việc bền vững.",
         },
         {
           label: "Xin huyện quyết định toàn bộ kế hoạch để khỏi tranh cãi trong làng.",
@@ -674,7 +718,9 @@ export const SCENARIOS = {
           correct: true,
           deltas: { dantoc: 3, doanket: 6, daichung: 4, daoduc: 4 },
           explanation:
-            "Dân chủ phải đi đôi với trách nhiệm và đoàn kết. Biến góp ý thành giải pháp, phân công cụ thể là cách xây dựng xã hội có kỷ luật, ý thức — đúng tinh thần xây dựng con người mới.",
+            "Dân chủ phải đi đôi với trách nhiệm và đoàn kết. Biến góp ý thành giải pháp, phân công cụ thể là cách xây dựng xã hội có kỷ luật, ý thức - đúng tinh thần xây dựng con người mới.",
+          depth:
+            "Dân chủ theo Hồ Chí Minh gắn liền với trách nhiệm và kỷ luật: dân được bàn, được quyết định, nhưng ai nhận làm phải làm cho tới nơi tới chốn. Xác nhận việc đã làm và việc còn thiếu, mời các nhóm nêu giải pháp, phân công người phụ trách và hẹn kiểm điểm lại là thực hành đúng quy trình đó: lắng nghe, biến bất đồng thành việc chung, rồi đưa vào giám sát tập thể. Họp không chỉ để phát biểu mà để giao trách nhiệm cụ thể.",
         },
         {
           label: "Đồng tình hoàn toàn với nhóm chê trách để lấy lòng số đông.",
@@ -706,14 +752,14 @@ export const SCENARIOS = {
           hint: "Chỉ nhìn thấy một mặt, bỏ qua văn hóa và phúc lợi.",
           deltas: { kinhte: 5, daichung: -4, daoduc: -2 },
           explanation:
-            "Kinh tế quan trọng nhưng không phải là tất cả. Đánh giá phiến diện khiến cộng đồng lơ là văn hóa, phúc lợi — vi phạm yêu cầu xây dựng đồng bộ các mặt của một nền văn hóa mới.",
+            "Kinh tế quan trọng nhưng không phải là tất cả. Đánh giá phiến diện khiến cộng đồng lơ là văn hóa, phúc lợi - vi phạm yêu cầu xây dựng đồng bộ các mặt của một nền văn hóa mới.",
         },
         {
           label: "Chỉ nêu thiếu sót, không công nhận tiến bộ để mọi người khỏi tự mãn.",
           hint: "Phủ nhận nỗ lực, làm mất động lực của nhân dân.",
           deltas: { doanket: -4, kinhte: -2, daoduc: -2 },
           explanation:
-            "Xây dựng xã hội mới phải động viên, khích lệ đúng mực. Chỉ chê hoặc chỉ khen đều sai phương pháp dân vận — cần nhìn nhận trung thực cả tiến bộ lẫn tồn tại.",
+            "Xây dựng xã hội mới phải động viên, khích lệ đúng mực. Chỉ chê hoặc chỉ khen đều sai phương pháp dân vận - cần nhìn nhận trung thực cả tiến bộ lẫn tồn tại.",
         },
         {
           label: "Nhìn nhận cả tiến bộ lẫn thiếu sót từng mặt, lập kế hoạch khắc phục, mời cả làng góp công góp ý.",
@@ -722,6 +768,8 @@ export const SCENARIOS = {
           deltas: { dantoc: 7, khoahoc: 8, daichung: 3, daoduc: 4, phucloi: 8, kinhte: 5 },
           explanation:
             "Tổng kết trung thực mọi mặt và lấy ý dân làm gốc là cách xây dựng con người mới hài hòa: có tri thức, đạo đức, yêu nước, ý thức kỷ luật và tôn trọng lợi ích cộng đồng.",
+          depth:
+            "Con người mới mà Hồ Chí Minh muốn xây dựng có tri thức, đạo đức, bản sắc, ý thức kỷ luật và tôn trọng lợi ích cộng đồng, nên tổng kết đầu năm, cuối năm phải nhìn toàn diện chứ không chỉ khoe con số kinh tế. Nhìn nhận trung thực cả tiến bộ lẫn thiếu sót của từng mặt rồi mời cả làng góp ý, góp công là cách phát huy quyền làm chủ của nhân dân và giữ phong trào không tự mãn. Chính phương châm “dân bàn, dân làm, dân kiểm tra” làm nên sức bền của nền văn hóa mới.",
         },
         {
           label: "Giao ban cán bộ tự đánh giá và quyết kế hoạch, khỏi họp dân mất thời gian.",

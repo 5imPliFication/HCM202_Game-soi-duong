@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Soi Đường — Xây dựng một cộng đồng văn hóa mới</title>
+  <title>Soi Đường - Xây dựng một cộng đồng văn hóa mới</title>
   <link rel="stylesheet" href="css/base.css" />
   <link rel="stylesheet" href="css/layout.css" />
   <link rel="stylesheet" href="css/components.css" />
@@ -29,7 +29,7 @@
     <!-- Màn chơi -->
     <section class="screen" data-screen="level">
       <header class="app-header">
-        <button id="btn-level-back" class="btn btn-small btn-ghost" type="button">⟨ Bản đồ</button>
+        <button id="btn-level-back" class="btn btn-small btn-ghost" type="button">< Bản đồ</button>
         <span id="level-h-title" class="app-title level-h-title"></span>
         <span id="level-progress" class="app-badge"></span>
       </header>
@@ -57,6 +57,7 @@
           <div class="explanation-body">
             <p id="explanation-text"></p>
             <blockquote id="explanation-thesis" class="explanation-thesis"></blockquote>
+            <div id="explanation-depth"></div>
           </div>
           <button id="btn-scenario-next" class="btn btn-primary" type="button"></button>
         </div>
@@ -84,11 +85,11 @@
               <h2 class="village-name">Làng Văn Hóa Mới</h2>
               <div class="village-balance">
                 <span class="balance-label">Thăng bằng</span>
-                <span id="balance-value" class="balance-value">—</span>
+                <span id="balance-value" class="balance-value">-</span>
               </div>
             </div>
             <div id="level-slots" class="level-slots" aria-label="Công trình làng"></div>
-            <div id="area-legend" class="area-legend" aria-label="Năm điểm lớn"></div>
+            <!-- <div id="area-legend" class="area-legend" aria-label="Năm điểm lớn"></div> -->
           </div>
           <div class="dev-panel">
             <h3 class="dev-title">Bảng thử nghiệm (tạm thời)</h3>
@@ -102,7 +103,7 @@
               <button type="button" class="btn btn-small" data-delta="doanket:8">+8 Đoàn kết</button>
               <button type="button" class="btn btn-small" data-delta="phucloi:8">+8 Phúc lợi</button>
               <button type="button" class="btn btn-small" data-delta="kinhte:8">+8 Kinh tế</button>
-              <button type="button" class="btn btn-small btn-warn" data-delta="kinhte:-12">−12 Kinh tế</button>
+              <button type="button" class="btn btn-small btn-warn" data-delta="kinhte:-12">-12 Kinh tế</button>
             </div>
           </div>
         </div>
@@ -124,7 +125,7 @@
           <div id="result-reasons" class="result-reasons" aria-label="Nhận định"></div>
           <div class="result-balance">
             <span class="balance-label">Thăng bằng</span>
-            <span id="result-balance-value" class="balance-value">—</span>
+            <span id="result-balance-value" class="balance-value">-</span>
           </div>
           <h3 class="panel-title">Chỉ số cộng đồng</h3>
           <div id="result-core-stats" class="stats-core"></div>
@@ -141,7 +142,7 @@
     <!-- Kiến thức đã học -->
     <section class="screen" data-screen="knowledge">
       <header class="app-header">
-        <button id="btn-knowledge-back" class="btn btn-small btn-ghost" type="button">⟨ Bản đồ</button>
+        <button id="btn-knowledge-back" class="btn btn-small btn-ghost" type="button">< Bản đồ</button>
         <h1 class="app-title">Kiến thức đã học</h1>
         <span class="app-badge">Kho tri thức</span>
       </header>

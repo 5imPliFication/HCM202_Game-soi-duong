@@ -313,6 +313,15 @@
   border-left: 4px solid var(--good);
 }
 
+.level-slot.is-inprogress {
+  border-left: 4px solid var(--accent);
+}
+
+.level-slot.is-inprogress .building-status {
+  color: var(--accent);
+  font-weight: 600;
+}
+
 .building-icon {
   font-size: 1.9rem;
   line-height: 1.2;
@@ -414,6 +423,7 @@
 }
 
 .level-h-title {
+  flex: 1 1 auto;
   font-size: 1.05rem;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -584,6 +594,42 @@
   color: var(--ink-soft);
 }
 
+.depth-dive {
+  margin: 0 0 1.4rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+  overflow: hidden;
+}
+
+.depth-dive summary {
+  cursor: pointer;
+  padding: 0.7rem 1rem;
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--accent);
+  user-select: none;
+  list-style: none;
+}
+
+.depth-dive summary::before {
+  content: "▸ ";
+  color: var(--gold);
+  transition: transform 0.15s ease;
+  display: inline-block;
+}
+
+.depth-dive[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.depth-dive-body {
+  padding: 0.8rem 1rem 1rem;
+  font-size: 0.95rem;
+  color: var(--ink);
+  border-top: 1px dashed var(--line);
+}
+
 .explanation .btn-primary {
   width: 100%;
   padding: 0.8rem;
@@ -594,7 +640,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  margin-top: 0.35rem;
+  margin-bottom: 0.5rem;
   padding: 0.25rem 0.7rem;
   border-radius: 999px;
   font-size: 0.8rem;
